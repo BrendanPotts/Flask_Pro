@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
 	<title>Deck Builder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-  </head>
+</head>
 
-  <body>
+<body>
 
     <div class="container">
       <div class="header">
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="/">Home</a></li>
-            <li role="presentation" class="active"><a href="login">Sign In</a></li>
-            <li role="presentation"><a href="#">Sign Up</a></li>
+            <li role="presentation"><a href="#">Sign In</a></li>
+            <li role="presentation" class="active"><a href="signup">Sign Up</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Sign Up</h3>
+        <h3 class="text-muted">Login</h3>
       </div>
 
       <div class="jumbotron">
-        <h1>Sign Up</h1>
+        <h1>Login</h1>
         <form class="form-signin">
-        <label for="inputName" class="sr-only">Name</label>
-        <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
 
-        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Login</button>
       </form>
       </div>
 
@@ -44,4 +42,5 @@
 
     </div>
   </body>
+
 </html>

@@ -8,7 +8,7 @@ mysql = MySQL()
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'admin'
-app.config['MYSQL_DATABASE_DB'] = 'BucketList'
+app.config['MYSQL_DATABASE_DB'] = 'DeckBuilder'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
 
@@ -19,7 +19,11 @@ cursor = conn.cursor()
 def home():
     return render_template('index.html')
 
-@app.route('/showSignUp')
+@app.route('/login')
+def showLogin():
+    return render_template('login.html')
+
+@app.route('/signup')
 def showSignUp():
     return render_template('signup.html')
 
@@ -37,6 +41,11 @@ def signUp():
         return json.dumps({'message': 'User created successfully !'})
     else:
         return json.dumps({'error': str(data[0])})
+
+
+@app.route('/admin')
+def adminPage():
+    return render_template('adminPage.html')
 
 if __name__ == '__main__':
     app.run()

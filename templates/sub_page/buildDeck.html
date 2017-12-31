@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>Deck Builder</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="google.ie">Brand</a>
+                <a class="btn btn-primary navbar-btn" href="/">Log Out</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+<div class="container-fluid">
+    <div class="col-sm-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">User Tools</h1>
+            </div>
+            <div class="list-group">
+                <a class="list-group-item">Build Deck</a>
+                <a class="list-group-item list-group-item-danger" href="delete">Delete Deck</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">Decks</h1>
+            </div>
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <h3>Card Description</h3>
+                    <p>Card Description</p>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <h1 class="panel-title">Cards</h1>
+            </div>
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <h3>Card Description</h3>
+                    <p>Card Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+</body>
+
+<footer class="footer">
+    <p>&copy; Baz & Bren 2015</p>
+</footer>
+
+
+</html>

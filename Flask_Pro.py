@@ -47,5 +47,17 @@ def signUp():
 def adminPage():
     return render_template('adminPage.html')
 
+@app.route('/user')
+def userPage():
+    return render_template('userPage.html')
+
+@app.route('/build')
+def builDeck():
+    return render_template('sub_page/buildDeck.html')
+@app.route('/delete')
+def delDeck():
+    return render_template('sub_page/delDeck.html')
+
+
 if __name__ == '__main__':
     app.run()

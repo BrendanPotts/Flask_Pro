@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>Deck Builder</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/addCard.js') }}"></script>
+</head>
+
+
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="google.ie">Brand</a>
+                <a class="btn btn-primary navbar-btn" href="/">Log Out</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+<div class="container-fluid">
+    <div class="col-sm-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">Admin Tools</h1>
+            </div>
+            <div class="list-group">
+                <a class="list-group-item" href="addCard">Add Card</a>
+                <a class="list-group-item" href="addUser">Add User</a>
+                <a class="list-group-item" href="info">Info</a>
+            </div>
+            <div class="panel-heading">
+                <h1 class="panel-title">User Tools</h1>
+            </div>
+				<div class="list-group">
+                    <a class="list-group-item" href="buildDeck">Build Deck</a>
+                    <a class="list-group-item list-group-item-danger" href="dellDeck">Delete Deck</a>
+				</div>
+			</div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">Add Card</h1>
+            </div>
+            <form class="form-signin">
+                <label for="c_name" class="sr-only">Card Name</label>
+                <input type="name" name="c_name" id="c_name" class="form-control" placeholder="Card Name" required autofocus>
+
+                <label for="c_type" class="sr-only">Email address</label>
+                <input type="name" name="c_type" id="c_type" class="form-control" placeholder="Card Type" required autofocus>
+
+                <button id="addCard" class="btn btn-lg btn-primary btn-block" type="button">Add Card</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+<footer class="footer">
+    <p>&copy; Baz & Bren 2015</p>
+</footer>
+
+
+
+
+</html>

@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/js.js') }}"></script>
 </head>
 
 
@@ -39,16 +42,35 @@
                     <a class="list-group-item" href="adminBuild">Build Deck</a>
                     <a class="list-group-item list-group-item-danger" href="dellDeck">Delete Deck</a>
 				</div>
-			</div>
-		</div>
+            </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">Decks</h1>
+            </div>
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <h3>Card Description</h3>
+                    <p>Card Description</p>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <h1 class="panel-title">Cards</h1>
+            </div>
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <h3>Card Description</h3>
+                    <p>Card Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
-
-<footer class="footer">
-    <p>&copy; Baz & Bren 2015</p>
-</footer>
-
-
 
 
 

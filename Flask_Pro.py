@@ -89,6 +89,27 @@ def addCard():
 def adminPage():
     return render_template('adminPage.html')
 
+@app.route('/addUser')
+def showAddUser():
+    return render_template('sub_page/addUser.html')
+
+@app.route('/addUser', methods=['POST'])
+def addUser():
+    _name = request.form['inputName']
+    _email = request.form['inputEmail']
+    _password = request.form['inputPassword']
+
+    _hashed_password = generate_password_hash(_password)
+    cursor.callproc('sp_createUser', (_name, _email, _hashed_password))
+
+    data = cursor.fetchall()
+
+    if len(data) is 0:
+        db.commit()
+        return json.dumps({'message': 'User created successfully !'})
+    else:
+        return json.dumps({'error': str(data[0])})
+
 @app.route('/user')
 def userPage():
     return render_template('userPage.html')
@@ -96,6 +117,11 @@ def userPage():
 @app.route('/build')
 def buildDeck():
     return render_template('sub_page/buildDeck.html')
+
+@app.route('/adminBuild')
+def adminBuild():
+    return render_template('sub_page/adminBuild.html')
+
 @app.route('/delete')
 def delDeck():
     return render_template('sub_page/delDeck.html')
